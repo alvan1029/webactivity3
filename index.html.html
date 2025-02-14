@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umbrella Haven | Premium Umbrellas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Umbrella Haven</div>
+            <div class="nav-icons">
+                <div class="cart-icon" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Premium Umbrellas for Every Weather</h1>
+        <p>Discover our collection of stylish and durable umbrellas</p>
+    </section>
+
+    <section class="products">
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterProducts('all')">All</button>
+            <button class="filter-btn" onclick="filterProducts('compact')">Compact</button>
+            <button class="filter-btn" onclick="filterProducts('golf')">Golf</button>
+            <button class="filter-btn" onclick="filterProducts('automatic')">Automatic</button>
+        </div>
+        <div class="products-grid" id="productsGrid">
+            <!-- Products will be dynamically added here -->
+        </div>
+    </section>
+
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">₱0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
